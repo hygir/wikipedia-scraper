@@ -1,2 +1,7 @@
 wikipedia-scraper
 =================
+
+Dependencies
+------------
+
+scrapy
