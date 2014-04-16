@@ -16,7 +16,7 @@ class HywikiJSONPipeline(object):
     if item['text'] == '-':
       return
     self.count += Counter(item['text'])
-    self.num_items = len(Counter)
+    self.num_items = len(self.count)
     if self.denominator < 1000 and self.num_items / self.denominator > 1:
       self.denominator = 10 * self.denominator
     if self.num_items % self.denominator == 0:

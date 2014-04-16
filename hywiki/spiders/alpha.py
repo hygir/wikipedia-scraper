@@ -21,5 +21,5 @@ class HywikiSpider(CrawlSpider):
   def parse_word(self, response):
     for match in self.word_regex.finditer(response.body.decode('utf-8')):
       word = HyWord()
-      word['text'] = match.group(0).decode('utf-8').lower()
+      word['text'] = match.group(0).lower()
       yield word
