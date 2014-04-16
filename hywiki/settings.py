@@ -11,6 +11,10 @@ BOT_NAME = 'hywiki'
 SPIDER_MODULES = ['hywiki.spiders']
 NEWSPIDER_MODULE = 'hywiki.spiders'
 
+ITEM_PIPELINES = {
+  'hywiki.pipelines.HywikiJSONPipeline': 500,
+}
+
 DEPTH_LIMIT = 1
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
