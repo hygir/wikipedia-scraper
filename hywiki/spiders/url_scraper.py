@@ -19,7 +19,7 @@ class HywikiUrlSpider(CrawlSpider):
   )
 
   word_regex = re.compile(
-      u'[\u0561-\u0585\u0531-\u0556]+[\u0561-\u0585\u0531-\u0556\-]+')
+      u'[\u0561-\u0586\u0531-\u0556]+[\u0561-\u0586\u0531-\u0556\-]+')
 
   def parse_word(self, response):
     word = HyWord()

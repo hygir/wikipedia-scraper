@@ -18,7 +18,7 @@ class HywikiWordSpider(CrawlSpider):
          follow=True),
   )
 
-  word_regex = re.compile(u'[\u0561-\u0585\u0531-\u0556]+[\u0561-\u0585\u0531-\u0556\-]+')
+  word_regex = re.compile(u'[\u0561-\u0586\u0531-\u0556]+[\u0561-\u0586\u0531-\u0556\-]+')
 
   def parse_word(self, response):
     for match in self.word_regex.finditer(response.body.decode('utf-8')):
