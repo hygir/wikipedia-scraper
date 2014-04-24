@@ -8,8 +8,8 @@ class HywikiJSONPipeline(object):
     self.count = Counter()
     self.denominator = 10
 
-  def dump_json(self):
-    with open('items-%d.json' % self.num_items, 'w') as outfile:
+  def dump_json(self, prefix=''):
+    with open('%sitems-%d.json' % (prefix, self.num_items), 'w') as outfile:
       json.dump(self.count, outfile, indent=2)
 
   def process_item(self, item, spider):
@@ -20,8 +20,8 @@ class HywikiJSONPipeline(object):
     if self.denominator < 1000 and self.num_items / self.denominator > 1:
       self.denominator = 10 * self.denominator
     if self.num_items % self.denominator == 0:
-      self.dump_json()
+      self.dump_json(prefix=spider.name + '-')
     return item
 
-  def close_spider(spider):
-    self.dump_json()
+  def close_spider(self, spider):
+    self.dump_json(prefix=spider.name + '-')
