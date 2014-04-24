@@ -37,3 +37,4 @@ nosetests.xml
 
 # scrapy
 items.json
+items-[0-9]*.json

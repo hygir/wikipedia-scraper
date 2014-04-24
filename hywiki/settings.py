@@ -15,7 +15,7 @@ ITEM_PIPELINES = {
   'hywiki.pipelines.HywikiJSONPipeline': 500,
 }
 
-DEPTH_LIMIT = 1
+DEPTH_LIMIT = 5
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'hywiki (+http://www.yourdomain.com)'
