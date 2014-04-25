@@ -35,5 +35,8 @@ nosetests.xml
 .project
 .pydevproject
 
+# Vim
+*.sw[op]
+
 # scrapy
 *items*.json
